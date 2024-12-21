@@ -1,0 +1,87 @@
+﻿<Window x:Class="DigiKonyvtarKez.RegisterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DigiKonyvtarKez"
+        mc:Ignorable="d"
+        Title="RegisterWindow" Height="450" Width="800" Background="#14111f">
+    <Border Margin="30" Background="#373547" CornerRadius="10">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <!--Username Input  -->
+            <TextBlock Text="Név:" Grid.Row="0" Grid.Column="0" Margin="10"
+	   VerticalAlignment="Center" Foreground="White"/>
+            <TextBox x:Name="UsernameTextBox" Grid.Row="0" Grid.Column="1" Width="200" Background="#14111f" Foreground="White" BorderThickness="0" Margin="10">
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+
+            <!--Password Input  -->
+            <TextBlock Text="Jelszó:" Grid.Row="1" Grid.Column="0" Margin="10"
+                    VerticalAlignment="Center" Foreground="White"/>
+            <PasswordBox x:Name="PasswordTextBox" Grid.Row="1" Grid.Column="1" Width="200" Background="#14111f" Foreground="White" BorderThickness="0" Margin="10">
+                <PasswordBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </PasswordBox.Resources>
+            </PasswordBox>
+
+            <!--Password2 Input  -->
+            <TextBlock Text="Jelszó újra:" Grid.Row="2" Grid.Column="0" Margin="10"
+                    VerticalAlignment="Center" Foreground="White"/>
+            <PasswordBox x:Name="Password2TextBox" Grid.Row="2" Grid.Column="1" Width="200" Background="#14111f" Foreground="White" BorderThickness="0" Margin="10">
+                <PasswordBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </PasswordBox.Resources>
+            </PasswordBox>
+
+            <!--Email Input  -->
+            <TextBlock Text="Email:" Grid.Row="3" Grid.Column="0" Margin="10"
+                    VerticalAlignment="Center" Foreground="White"/>
+            <TextBox x:Name="EmailTextBox" Grid.Row="3" Grid.Column="1" Width="200" Background="#14111f" Foreground="White" BorderThickness="0" Margin="10">
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+
+            <!--Register Button  -->
+            <Button x:Name="RegisterButton" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Content="Regisztráció" Background="#14111f" Foreground="White" BorderThickness="0" Margin="10" Click="RegisterButton_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            
+            <!--Login Button  -->
+            <Button x:Name="LoginButton" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Content="Bejelentkezés" Background="#14111f" Foreground="White" BorderThickness="0" Margin="10" Click="LoginButton_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </Grid>
+    </Border>
+</Window>

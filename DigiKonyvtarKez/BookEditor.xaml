@@ -1,0 +1,94 @@
+﻿<Window x:Class="DigiKonyvtarKez.BookEditor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DigiKonyvtarKez"
+        mc:Ignorable="d"
+        Title="BookEditor" Height="250" Width="350"
+        Background="#373547"
+        >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <!--Book Title Input  -->
+        <TextBlock Text="Cím:" Grid.Row="0" Grid.Column="0" Margin="10"
+                   VerticalAlignment="Center" Foreground="White"/>
+        <TextBox x:Name="BookTitleTextBox" Grid.Row="0" Grid.Column="1" Width="200" Background="#14111f" Foreground="White" BorderThickness="0" Margin="10">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+
+        <!--Author Input  -->
+        <TextBlock Text="Szerző:" Grid.Row="1" Grid.Column="0" Margin="10"
+                   VerticalAlignment="Center" Foreground="White"/>
+        <TextBox x:Name="AuthorTextBox" Grid.Row="1" Grid.Column="1" Width="200" Background="#14111f" Foreground="White" BorderThickness="0" Margin="10">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+
+        <!--Year Input  -->
+        <TextBlock Text="Év:" Grid.Row="2" Grid.Column="0" Margin="10"
+                   VerticalAlignment="Center" Foreground="White"/>
+        <TextBox x:Name="YearTextBox" Grid.Row="2" Grid.Column="1" Width="200" Background="#14111f" Foreground="White" BorderThickness="0" Margin="10">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+
+        <!-- Genre Input  -->
+        <TextBlock Text="Műfaj:" Grid.Row="3" Grid.Column="0" Margin="10"
+                   VerticalAlignment="Center" Foreground="White"/>
+        <ComboBox x:Name="GenreComboBox" Grid.Row="3" Grid.Column="1" Width="100" Background="#14111f" Foreground="White" BorderThickness="0" Margin="10">
+            <ComboBox.Resources>
+                <SolidColorBrush x:Key="{x:Static SystemColors.WindowBrushKey}" Color="#14111f" />
+                <SolidColorBrush x:Key="{x:Static SystemColors.HighlightTextBrushKey}" Color="#14111f" />
+            </ComboBox.Resources>
+            <ComboBoxItem Content="Regény"/>
+            <ComboBoxItem Content="Tudományos"/>
+            <ComboBoxItem Content="Ismeretterjesztő"/>
+            <ComboBoxItem Content="Képregény"/>
+            <ComboBoxItem Content="Fantasy"/>
+        </ComboBox>
+        
+        <!-- Delete Button-->
+        <Button x:Name="DeleteButton" Grid.Row="4" Grid.Column="0" Width="100" Height="30" Background="#14111f" Foreground="White" BorderThickness="0" Margin="10" Click="DeleteButton_Click">
+            Törlés
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!--Save Button  -->
+        <Button x:Name="SaveButton" Grid.Row="4" Grid.Column="1" Width="100" Height="30" Background="#14111f" Foreground="White" BorderThickness="0" Margin="10" Click="SaveButton_Click">
+            Mentés
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        
+
+    </Grid>
+</Window>
