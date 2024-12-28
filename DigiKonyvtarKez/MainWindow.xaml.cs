@@ -52,7 +52,7 @@ namespace DigiKonyvtarKez
             if (Users.Any(u => u.Name == name && u.Password == password))
             {
                 User loggedInUser = Users.First(u => u.Name == name && u.Password == password);
-                if (loggedInUser.IsAdmin)
+                if ((bool)loggedInUser.IsAdmin)
                 {
                     AdminWindow adminWindow = new AdminWindow();
                     adminWindow.Show();
