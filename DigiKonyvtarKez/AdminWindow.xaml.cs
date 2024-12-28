@@ -49,7 +49,7 @@ namespace DigiKonyvtarKez
                 var selectedUser = UserListBox.SelectedItem.ToString();
                 User selected = Users.Where(u => u.Name == selectedUser).First();
                 if (selected != null) {
-                    if (selected.IsAdmin)
+                    if ((bool)selected.IsAdmin)
                     {
                         MessageBox.Show("Az adminisztrátort nem lehet törölni", "Hiba", MessageBoxButton.OK, MessageBoxImage.Error);
                         return;
