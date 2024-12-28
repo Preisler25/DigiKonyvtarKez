@@ -109,7 +109,7 @@ namespace DigiKonyvtarKez
             MessageBox.Show("Sikeres regisztráció!", "Regisztráció", MessageBoxButton.OK,
                 MessageBoxImage.Information);
 
-            if (u.IsAdmin)
+            if ((bool)u.IsAdmin)
             {
                 AdminWindow adminWindow = new AdminWindow();
                 adminWindow.Show();
